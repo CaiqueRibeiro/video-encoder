@@ -71,7 +71,7 @@ func (vu *VideoUpload) loadPaths() error {
 
 func (vu *VideoUpload) ProcessUpload(concurrency int, doneUpload chan string) error {
 
-	in := make(chan int, runtime.NumCPU()) // qual o arquivo baseado na posicao do slice Paths
+	in := make(chan int, runtime.NumCPU())
 	returnChannel := make(chan string)
 
 	err := vu.loadPaths()
